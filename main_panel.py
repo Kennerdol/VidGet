@@ -6,8 +6,8 @@ from kivy.uix.label import Label
 
 class MyApp(App):
     def build(self):
-        self.icon = "assets/img/vg.png"  # Set the application icon (replace with your icon file path)
-        self.title = "Vidget"  # Set the application title
+        self.icon = "assets/img/vg.png"
+        self.title = "Vidget"
         return Label(text="Youtube Downloader", font_size=72)
 
 
