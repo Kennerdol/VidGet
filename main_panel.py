@@ -4,7 +4,7 @@ from kivy.app import App
 from kivy.uix.label import Label
 
 
-class MyApp(App):
+class VidGetApp(App):
     def build(self):
         self.icon = "assets/img/vg.png"
         self.title = "Vidget"
@@ -12,4 +12,4 @@ class MyApp(App):
 
 
 if __name__ == "__main__":
-    MyApp().run()
+    VidGetApp().run()
