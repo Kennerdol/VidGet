@@ -8,7 +8,7 @@ class VidGetApp(App):
     def build(self):
         self.icon = "assets/img/vg.png"
         self.title = "Vidget"
-        return Label(text="Youtube Downloader", font_size=72)
+        return Label(text="VidGet Youtube Downloader", font_size=72)
 
 
 if __name__ == "__main__":
