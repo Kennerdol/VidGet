@@ -2,15 +2,17 @@
 import kivy
 from kivy.app import App
 from kivy.uix.label import Label
+from kivy.lang import Builder
 from kivy.core.window import Window
 
-Window.size = (700,400)
+Builder.load_file('vidget.kv')
+
+Window.minimum_width = 800
+Window.minimum_height = 500
 
 class VidGetApp(App):
     def build(self):
-        self.icon = "assets/img/vg.png"
-        self.title = "Vidget"
-        return Label(text="VidGet Youtube Downloader", font_size=72)
+        pass
 
 
 if __name__ == "__main__":

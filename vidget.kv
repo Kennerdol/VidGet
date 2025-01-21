@@ -1,0 +1,88 @@
+#:import utils kivy.utils
+
+GridLayout:
+    cols: 1
+    rows: 3
+    padding: 5
+
+    # First row: BoxLayout
+    BoxLayout:
+        spacing: 5
+        orientation: "horizontal"
+
+        TextInput:
+            multiline: False  
+            text: "Paste YouTube video link here..."
+            font_size: 20
+            size_hint: (1, .25)
+            pos_hint: {"center_y": 0.5}
+
+
+        Button:
+            text: "Search"
+            font_size: 20
+            size_hint: (0.2, .25)
+            background_normal: ""
+            background_color: utils.get_color_from_hex("#6490b5")
+            pos_hint: {"center_y": 0.5}
+
+
+    # Second row: BoxLayout
+    BoxLayout:
+        spacing: 5
+        Image:
+            source: "kivy-logo.png"
+            size_hint: .5, 1
+
+        BoxLayout:
+            orientation: "vertical"
+            spacing: 10  # Adds space between elements
+            padding: [10, 10, 10, 10]  # Adds padding around the BoxLayout
+
+            Label:
+                text: "Video Description:"
+                font_size: 20
+                halign: "center"  # Center-aligns the text within the label
+                size_hint_y: None
+                height: 40  # You can adjust the height for better spacing
+
+            Label:
+                text: "Duration:"
+                font_size: 20
+                halign: "center"  # Center-aligns the text within the label
+                size_hint_y: None
+                height: 40  # You can adjust the height for better spacing
+
+            BoxLayout:
+                spacing: 5
+                Button:
+                    text: "Download"
+                    font_size: 15
+                    size_hint: .1, .5
+                    background_normal: ""
+                    background_color: utils.get_color_from_hex("#6490b5")
+
+                Spinner:
+                    text: "Select Option"
+                    values: [".MP4 1080i", ".WAV 720i", ".AVI 360i"]  # Define options for the spinner
+                    size_hint: (0.1, .5)  # Adjust the width of the spinner
+
+
+
+
+    # Third row: BoxLayout
+    BoxLayout:
+        spacing: 2
+        padding: 5
+
+        BoxLayout:
+            orientation: "vertical"
+
+            Label:
+                text: "Downloading..."
+                font_size: 30
+            Slider:
+                min: 0
+                max: 100
+                value: 25
+
