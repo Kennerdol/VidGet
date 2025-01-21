@@ -2,7 +2,9 @@
 import kivy
 from kivy.app import App
 from kivy.uix.label import Label
+from kivy.core.window import Window
 
+Window.size = (700,400)
 
 class VidGetApp(App):
     def build(self):
